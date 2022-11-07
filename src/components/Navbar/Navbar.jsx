@@ -1,8 +1,6 @@
 import React from "react";
 import classes from './Navbar.module.css';
 
-console.log(classes);
-
 // let classes {
 //     'nav': 'Navbar_nav_dfdf',
 //     'item': 'Navbar_Item_dfdf'
@@ -17,11 +15,11 @@ const Navbar = () => {
     return (
         <nav className={classes.nav}>
             <ul className={classes.list}>
-                <li><a className={`${classes.item} ${classes.active}`} href="">Profile</a></li>
-                <li><a className={classes.item} href="">Message</a></li>
-                <li><a className={classes.item} href="">News</a></li>
-                <li><a className={classes.item} href="">Music</a></li>
-                <li><a className={classes.item} href="">Settings</a></li>
+                <li><a className={classes.item} href="#">Profile</a></li>
+                <li><a className={`${classes.item} ${classes.active}`} href="#">Message</a></li>
+                <li><a className={classes.item} href="#">News</a></li>
+                <li><a className={classes.item} href="#">Music</a></li>
+                <li><a className={classes.item} href="#">Settings</a></li>
             </ul>
         </nav>
     );
