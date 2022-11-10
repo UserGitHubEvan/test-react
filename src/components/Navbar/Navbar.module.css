@@ -11,8 +11,10 @@
 
 .item {
     color: white;
+    text-decoration: none;
 }
 
-.item.active {
-    color: brown;
+.activeLink {
+    color: red;
+    text-decoration: none;
 }
