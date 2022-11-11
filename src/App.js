@@ -8,8 +8,8 @@ import Footer from './components/Footer/Footer';
 import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
 import Music from './components/Music/Music';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Settings from "./components/Settings/Settings";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 const App = (props) => {
     return (
