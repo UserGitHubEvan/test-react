@@ -1,3 +1,13 @@
-.posts {
+.postsBlock {
+    padding: 10px;
+}
 
+.addPost {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    margin: 0 0 20px 0;
+}
+
+.posts {
 }
