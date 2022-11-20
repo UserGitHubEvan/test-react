@@ -4,10 +4,14 @@ import Post from "./Post/Post";
 
 const  MyPosts = () => {
 
-    let postData = [
+    // Imitating a server with data. Array with data objects
+    let posts = [
         {id: '1', message: 'Hiy, how are you?', likesCount: 50, dislikesCount: 10},
         {id: '2', message: 'New news for wire'}
-    ]
+    ];
+
+    // Using function .map() for new Array components
+    let postsElements = posts.map(post => <Post message={post.message} likesCount={post.likesCount} dislikesCount={post.dislikesCount} />);
 
     return (
         <div className={classes.postsBlock}>
@@ -17,8 +21,7 @@ const  MyPosts = () => {
                 <button className={classes.btnNewsSend}>Send</button>
             </form>
             <div className={classes.posts}>
-                <Post message={postData[0].message} likesCount={postData[0].likesCount} dislikesCount={postData[0].dislikesCount} />
-                <Post message={postData[0].message} likesCount={postData[0].likesCount} dislikesCount={postData[0].dislikesCount} />
+                { postsElements }
             </div>
         </div>
     );
