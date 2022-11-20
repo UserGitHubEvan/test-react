@@ -18,20 +18,35 @@ const Message = (props) => {
 }
 
 const Dialogs = (props) => {
+    // Imitating a server with data. Array with data objects
+    let dialogsData = [
+        {id: '1', name: 'Sasha'},
+        {id: '2', name: 'Kosta'},
+        {id: '3', name: 'Misha'},
+        {id: '4', name: 'Den'},
+        {id: '5', name: 'Anna'}
+    ]
+
+    let messageData = [
+        {id: '1', message: 'Hello'},
+        {id: '2', message: 'Who are you?'},
+        {id: '3', message: 'Hi'}
+    ]
+
     return (
         <div className={classes.dialogs}>
             <ul className={classes.dialogsList}>
-                <DialogItem name='Sasha' id='1' />
-                <DialogItem name='Kosta' id='2' />
-                <DialogItem name='Misha' id='3' />
-                <DialogItem name='Den' id='4' />
-                <DialogItem name='Anna' id='5' />
+                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
+                <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
+                <DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />
+                <DialogItem name={dialogsData[4].name} id={dialogsData[4].id} />
             </ul>
             <ul className={classes.messagesList}>
-                <Message message='Hello' />
-                <Message message='Who are you?' />
-                <Message message='Hi' />
+                <Message message={messageData[0].message} />
+                <Message message={messageData[1].message} />
             </ul>
+                <Message message={messageData[2].message} />
         </div>
     );
 }

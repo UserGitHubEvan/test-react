@@ -3,18 +3,23 @@ import classes from './MyPosts.module.css'
 import Post from "./Post/Post";
 
 const  MyPosts = () => {
+
+    let postData = [
+        {id: '1', message: 'Hiy, how are you?', likesCount: 50, dislikesCount: 10},
+        {id: '2', message: 'New news for wire'}
+    ]
+
     return (
         <div className={classes.postsBlock}>
             <h3>My post</h3>
-            <div className={classes.addPost}>
-                <textarea></textarea>
-                <button>Add post</button>
-            </div>
+            <form action="" className={classes.addPost}>
+                <input type='text' placeholder='your news...' className={classes.yourNews} />
+                <button className={classes.btnNewsSend}>Send</button>
+            </form>
             <div className={classes.posts}>
-                <Post message='Hiy, how are you?' likesCount='10' dislikesCount='5' />
-                <Post message='New news for wire' likesCount='50' dislikesCount='1' />
+                <Post message={postData[0].message} likesCount={postData[0].likesCount} dislikesCount={postData[0].dislikesCount} />
+                <Post message={postData[0].message} likesCount={postData[0].likesCount} dislikesCount={postData[0].dislikesCount} />
             </div>
-            {/*<Post />*/}
         </div>
     );
 }
